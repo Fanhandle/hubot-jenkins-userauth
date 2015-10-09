@@ -31,7 +31,7 @@ crypto = require 'crypto'
 # list.
 jobList = []
 
-crypto_secret = process.env.HUBOT_JENKINS_CRYPTO_SECRET
+crypto_secret = process.env.HUBOT_JENKINS_CRYPTO_SECRET + '';
 
 encrypt = (text) ->
   cipher = crypto.createCipher('aes-256-cbc', crypto_secret)
